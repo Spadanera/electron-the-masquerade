@@ -1,0 +1,31 @@
+{
+  "name": "the-masquerade",
+  "version": "1.0.0",
+  "description": "Manage your Vampire The Masquerade chronicles",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^7.1.1",
+    "electron-builder": "^22.1.0"
+  },
+  "build": {
+    "appId": "the.masquerade",
+    "mac": {
+      "category": "public.app-category.entertainment"
+    }
+  }
+}
