@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder -lwm"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -16,16 +16,38 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Nicola Zirilli <ziro84@gmail.com>",
+  "license": "ISC",
   "devDependencies": {
     "electron": "^7.1.1",
-    "electron-builder": "^22.1.0"
+    "electron-builder": "^22.1.0",
+    "electron-packager": "^14.1.0"
   },
   "build": {
-    "appId": "the.masquerade",
+    "appId": "com.electron.themasquerade",
+    "productName": "The Masquerade",
+    "buildVersion": "1",
+    "copyright": "Copyright © 2019 ${author}",
+    "icon": "./Icon/Icon.icns",
     "mac": {
       "category": "public.app-category.entertainment"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "category": "Game",
+      "target": [
+        "deb"
+      ]
     }
-  }
+  },
+  "dependencies": {}
 }
